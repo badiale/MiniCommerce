@@ -453,6 +453,17 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
+    },
+
+    ngdocs: {
+      options: {
+        dest: "docs",
+        title: "Documentation"
+      },
+      api: {
+        src: ["app/scripts/**/*.js", "!app/scripts/vendor/**/*.js"],
+        title: "API Documentation"
+      }
     }
   });
 
@@ -501,7 +512,8 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'ngdocs'
   ]);
 
   grunt.registerTask('default', [
