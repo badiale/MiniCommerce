@@ -41,6 +41,6 @@ angular
         controller: 'OrderCtrl'
       })
       .otherwise({
-        redirectTo: '/profile'
+        redirectTo: '/order'
       });
   });
