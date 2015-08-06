@@ -4,8 +4,7 @@
  * @ngdoc service
  * @name miniCommerceApp.addressService
  * @description
- * # addressService
- * Service in the miniCommerceApp.
+ * Serviço para simular uma conexão com um servidor e manipular dados de endereço.
  */
 angular.module('miniCommerceApp')
   .service('addressService', function ($q, $window) {

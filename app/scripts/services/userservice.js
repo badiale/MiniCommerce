@@ -4,7 +4,7 @@
  * @ngdoc service
  * @name miniCommerceApp.userService
  * @description
- * Serviço para simular uma conexão com um servidor.
+ * Serviço para simular uma conexão com um servidor e manipular dados de usuário.
  */
 angular.module('miniCommerceApp')
   .service('userService', function ($window, $q) {

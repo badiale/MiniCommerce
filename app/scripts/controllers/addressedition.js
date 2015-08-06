@@ -2,13 +2,12 @@
 
 /**
  * @ngdoc function
- * @name miniCommerceApp.controller:AddresseditionCtrl
+ * @name miniCommerceApp.controller:AddressEditionCtrl
  * @description
- * # AddresseditionCtrl
- * Controller of the miniCommerceApp
+ * Controller para edição de endereço
  */
 angular.module('miniCommerceApp')
-  .controller('AddresseditionCtrl', function ($scope, addressService, $routeParams, $q) {
+  .controller('AddressEditionCtrl', function ($scope, addressService, $routeParams, $q) {
     $scope.alerts = [];
 
     if ($routeParams.id !== "new") {

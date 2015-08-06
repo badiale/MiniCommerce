@@ -1,13 +1,13 @@
 'use strict';
 
-describe('Controller: AddresseditionCtrl', function () {
+describe('Controller: AddressEditionCtrl', function () {
 
   // load the controller's module
   beforeEach(module('miniCommerceApp'));
 
   it('should notify user when address is successfully created', inject(function ($controller, $rootScope, $q) {
     var scope = $rootScope.$new();
-    $controller('AddresseditionCtrl', {
+    $controller('AddressEditionCtrl', {
       $scope: scope,
       addressService: {
         updateAddress: function (address) {
@@ -27,7 +27,7 @@ describe('Controller: AddresseditionCtrl', function () {
 
   it('should be able to edit address', inject(function ($controller, $rootScope, $q) {
     var scope = $rootScope.$new();
-    $controller('AddresseditionCtrl', {
+    $controller('AddressEditionCtrl', {
       $scope: scope,
       addressService: {
         findAddressById: function (id) {

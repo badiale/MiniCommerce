@@ -30,11 +30,15 @@ angular
       })
       .when('/address/:id', {
         templateUrl: 'views/addressedition.html',
-        controller: 'AddresseditionCtrl'
+        controller: 'AddressEditionCtrl'
       })
       .when('/address/new', {
         templateUrl: 'views/addressedition.html',
-        controller: 'AddresseditionCtrl'
+        controller: 'AddressEditionCtrl'
+      })
+      .when('/order', {
+        templateUrl: 'views/order.html',
+        controller: 'OrderCtrl'
       })
       .otherwise({
         redirectTo: '/profile'
