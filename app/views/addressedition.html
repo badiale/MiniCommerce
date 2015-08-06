@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h3>Edição do endereço {{ address.id }}</h3>
+  </div>
+</div>
+<form ng-submit="saveAddress()">
+  <fieldset ng-disabled="!address">
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <div class="form-group">
+          <label for="inputStreet">Rua</label>
+          <input type="text" class="form-control" id="inputStreet" placeholder="Rua" ng-model="address.street" required>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <label for="inputNumber">Número</label>
+          <input type="number" class="form-control" id="inputNumber" placeholder="Número" ng-model="address.number"
+                 required>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-12 col-sm-8">
+        <div class="form-group">
+          <label for="inputCity">Cidade</label>
+          <input type="text" class="form-control" id="inputCity" placeholder="Cidade" ng-model="address.city" required>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+        <div class="form-group">
+          <label for="inputState">Estado</label>
+          <input type="text" class="form-control" id="inputState" placeholder="Estado" ng-model="address.state" required
+                 pattern="[a-zA-Z]{2}" title="Este campo deve conter duas letras">
+        </div>
+      </div>
+    </div>
+
+    <alert ng-repeat="alert in alerts" type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+
+    <div class="row">
+      <div class="col-xs-12">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
