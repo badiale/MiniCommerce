@@ -93,6 +93,10 @@ module.exports = function (grunt) {
                 '/app/styles',
                 connect.static('./app/styles')
               ),
+              connect().use(
+                '/fonts',
+                connect.static('./bower_components/bootstrap/fonts')
+              ),
               connect.static(appConfig.app)
             ];
           }
@@ -288,7 +292,8 @@ module.exports = function (grunt) {
         assetsDirs: [
           '<%= yeoman.dist %>',
           '<%= yeoman.dist %>/images',
-          '<%= yeoman.dist %>/styles'
+          '<%= yeoman.dist %>/styles',
+          '<%= yeoman.dist %>/fonts'
         ],
         patterns: {
           js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
@@ -301,6 +306,9 @@ module.exports = function (grunt) {
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
     // cssmin: {
+    //   options: {
+    //     rebase: false
+    //   },
     //   dist: {
     //     files: {
     //       '<%= yeoman.dist %>/styles/main.css': [
@@ -457,12 +465,12 @@ module.exports = function (grunt) {
 
     ngdocs: {
       options: {
-        dest: "docs",
-        title: "Documentation"
+        dest: 'docs',
+        title: 'Documentation'
       },
       api: {
-        src: ["app/scripts/**/*.js", "!app/scripts/vendor/**/*.js"],
-        title: "API Documentation"
+        src: ['app/scripts/**/*.js', '!app/scripts/vendor/**/*.js'],
+        title: 'API Documentation'
       }
     }
   });

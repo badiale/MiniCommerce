@@ -10,7 +10,7 @@ angular.module('miniCommerceApp')
   .controller('AddressEditionCtrl', function ($scope, addressService, $routeParams, $q) {
     $scope.alerts = [];
 
-    if ($routeParams.id !== "new") {
+    if ($routeParams.id !== 'new') {
       addressService.findAddressById(parseInt($routeParams.id, 10)).then(setAddress);
     } else {
       $q.when({}).then(setAddress);

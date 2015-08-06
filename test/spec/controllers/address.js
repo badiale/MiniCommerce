@@ -7,8 +7,7 @@ describe('Controller: AddressCtrl', function () {
 
   var AddressCtrl,
     scope,
-    addresses,
-    removeAddress;
+    addresses;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope, $q) {

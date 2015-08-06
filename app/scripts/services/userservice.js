@@ -8,7 +8,7 @@
  */
 angular.module('miniCommerceApp')
   .service('userService', function ($window, $q) {
-    var USER = "user";
+    var USER = 'user';
 
     /**
      * @ngdoc method
@@ -26,9 +26,9 @@ angular.module('miniCommerceApp')
       }
 
       return $q.when({
-        name: "João",
-        surname: "Carlos",
-        email: "jao@minicommerce.com",
+        name: 'João',
+        surname: 'Carlos',
+        email: 'jao@minicommerce.com',
         receiveOffer: true
       });
     };

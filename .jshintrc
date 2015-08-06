@@ -5,6 +5,7 @@
   "eqeqeq": true,
   "esnext": true,
   "latedef": "nofunc",
+  "quotmark": "single",
   "noarg": true,
   "node": true,
   "strict": true,

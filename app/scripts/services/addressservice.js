@@ -8,7 +8,7 @@
  */
 angular.module('miniCommerceApp')
   .service('addressService', function ($q, $window) {
-    var KEY = "address";
+    var KEY = 'address';
     var storage = $window.localStorage;
 
     /**
@@ -74,7 +74,7 @@ angular.module('miniCommerceApp')
           }
         });
         if (found === null) {
-          throw new Error("Id not found: " + id);
+          throw new Error('Id not found: ' + id);
         }
         return found;
       });
@@ -115,22 +115,22 @@ angular.module('miniCommerceApp')
       }
       return $q.when([{
         id: 1,
-        street: "rua 1",
+        street: 'rua 1',
         number: 10,
-        city: "São Paulo",
-        state: "SP"
+        city: 'São Paulo',
+        state: 'SP'
       }, {
         id: 2,
-        street: "rua 2",
+        street: 'rua 2',
         number: 20,
-        city: "São Paulo",
-        state: "SP"
+        city: 'São Paulo',
+        state: 'SP'
       }, {
         id: 3,
-        street: "rua 3",
+        street: 'rua 3',
         number: 30,
-        city: "São Paulo",
-        state: "SP"
+        city: 'São Paulo',
+        state: 'SP'
       }]);
     };
   });

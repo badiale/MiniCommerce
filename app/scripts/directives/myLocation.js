@@ -20,12 +20,12 @@ angular.module('miniCommerceApp')
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
         var href = attrs.myLocation;
-        element.attr("href", href);
+        element.attr('href', href);
 
         scope.$watch(function () {
           return $location.url();
         }, function (newUrl) {
-          element.parent().toggleClass("active", href === "#" + newUrl);
+          element.parent().toggleClass('active', href === '#' + newUrl);
         });
       }
     };
