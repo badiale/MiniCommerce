@@ -13,6 +13,8 @@
  * pela url.
  * <p>
  * Esta diretiva é ideal para ser usada com a barra de navegação do bootstrap.
+ * @param {string} myLocation
+ * Url para qual o link aponta.
  */
 angular.module('miniCommerceApp')
   .directive('myLocation', function ($location) {
