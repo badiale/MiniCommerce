@@ -13,14 +13,28 @@ angular.module('miniCommerceApp')
       $scope.user = user;
     }).finally(stopLoading);
 
+    $scope.alerts = [];
+
     $scope.saveUser = function () {
       var user = $scope.user;
       if (user.password !== user.confirmPassword) {
-        // FIXME deveria aparecer uma mensagem amigável para o usuário.
-        throw new Error('Wrong passwords: "' + user.password + '" != "' + user.confirmPassword + '"');
+        $scope.alerts.push({
+          type: 'danger',
+          msg: 'As senhas fornecidas são diferentes.'
+        });
+        return;
       }
       $scope.loading = true;
-      userService.saveUser(user).finally(stopLoading);
+      userService.saveUser(user).then(function () {
+        $scope.alerts.push({
+          type: 'success',
+          msg: 'Usuário salvo com sucesso.'
+        });
+      }).finally(stopLoading);
+    };
+
+    $scope.closeAlert = function (index) {
+      $scope.alerts.splice(index, 1);
     };
 
     function stopLoading() {
